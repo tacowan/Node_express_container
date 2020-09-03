@@ -41,9 +41,9 @@ jobs:
         docker push ${{ env.CONTAINER_REGISTRY }}/nodejsapp:${{ github.sha }} 
 
 # Uncomment the below action snippet if the Web app credentials are not updated as web app settings
-     - name: Set Web App ACR authentication
-       uses: Azure/appservice-settings@v1
-       with:
+    - name: Set Web App ACR authentication
+      uses: Azure/appservice-settings@v1
+      with:
          app-name: ${{ env.AZURE_WEBAPP_NAME }} 
          app-settings-json: |
            [
